@@ -14,7 +14,7 @@ int main()
     {
         printf("Enter weight in Kilograms:");
         scanf("%f", &kilograms);
-        printf("%f is equal to %.2f pounds\n", kilograms, kilograms * 2.20462);
+        printf("%f kg is equal to %.2f pounds\n", kilograms, kilograms * 2.20462);
     }
     else if (choice > 2)
     {
@@ -24,7 +24,7 @@ int main()
     {
         printf("Enter the weight in pounds:");
         scanf("%f", &pounds);
-        printf("%f is equal to %.2f kilograms\n", pounds, pounds / 2.20462);
+        printf("%f lb is equal to %.2f kilograms\n", pounds, pounds / 2.20462);
     }
     return 0;
 }
