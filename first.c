@@ -1,16 +1,30 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
-char food[10];
-float price;
-int quantity;
-printf("which item would yuu like to buy?: ");
-scanf("%s", food);
-printf("what is the price for each?:");
-scanf("%f", &price);
-printf("how many would you like to buy?:");
-scanf("%d", &quantity);
-printf("you have bought %d %s \n", quantity, food);
-printf("the total is %f \n", price*quantity);
-return 0;
-}   
+int main()
+{
+    int choice;
+    float kilograms, pounds;
+
+    printf("Weight Conversion Calculator\n");
+    printf("1. Kilograms to Pounds\n");
+    printf("2. Pounds to Kilograms\n");
+    printf("Enter your choice (1 or 2): ");
+    scanf("%d", &choice);
+    if (choice == 1)
+    {
+        printf("Enter weight in Kilograms:");
+        scanf("%f", &kilograms);
+        printf("%f is equal to %.2f pounds\n", kilograms, kilograms * 2.20462);
+    }
+    else if (choice > 2)
+    {
+        printf("Invalid choice. Please select 1 or 2.\n");
+    }
+    else
+    {
+        printf("Enter the weight in pounds:");
+        scanf("%f", &pounds);
+        printf("%f is equal to %.2f kilograms\n", pounds, pounds / 2.20462);
+    }
+    return 0;
+}
