@@ -2,29 +2,40 @@
 
 int main()
 {
-    int choice;
-    float kilograms, pounds;
+    char operator ='\0';
+    float num1 = 0.0;
+    float num2 = 0.0;
+    float result = 0.0;
 
-    printf("Weight Conversion Calculator\n");
-    printf("1. Kilograms to Pounds\n");
-    printf("2. Pounds to Kilograms\n");
-    printf("Enter your choice (1 or 2): ");
-    scanf("%d", &choice);
-    if (choice == 1)
-    {
-        printf("Enter weight in Kilogram:");
-        scanf("%f", &kilograms);
-        printf("%f kg is equal to %.2f pounds\n", kilograms, kilograms * 2.20462);
-    }
-    else if (choice > 2)
-    {
-        printf("Invalid choice. Please select 1 or 2.\n");
-    }
-    else
-    {
-        printf("Enter the weight in pounds:");
-        scanf("%f", &pounds);
-        printf("%f lb is equal to %.2f kilograms\n", pounds, pounds / 2.20462);
-    }
+    printf("Enter the first number: ");
+    scanf("%f", &num1);
+    printf("Enter an operator (+, -, *, /): ");
+    scanf(" %c", &operator);
+    printf("Enter the second number: ");
+    scanf("%f", &num2);
+
+    switch (operator)
+        {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break; 
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                if (num2 != 0){
+                    result = num1 / num2;
+                } else {
+                    printf("Thora chutiya hai kya\n");
+                    
+                }
+                break;
+            default:
+                printf("Invalid operator\n");
+        }
+            printf("Result: %.2f\n", result);
     return 0;
 }
