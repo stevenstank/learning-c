@@ -7,7 +7,7 @@ int main()
     float num2 = 0.0;
     float result = 0.0;
 
-    printf("Enter the first number: ");
+    printf("Enter the first numberr: ");
     scanf("%f", &num1);
     printf("Enter an operator (+, -, *, /): ");
     scanf(" %c", &operator);
