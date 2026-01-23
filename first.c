@@ -9,7 +9,7 @@ int main()
 
     printf("Enter the first numberr: ");
     scanf("%f", &num1);
-    printf("Enter an operator (+, -, *, /): ");
+    printf("Enter an operatorr (+, -, *, /): ");
     scanf(" %c", &operator);
     printf("Enter the second number: ");
     scanf("%f", &num2);
